@@ -1,0 +1,20 @@
+//? ============= var-01.SCSS-змінні  (break-points) ============
+$mobile: 320px;
+$mobile-xl: 575px;
+$tablet: 767px;
+$tablet-xl: 992px;
+$desktop: 1600px;
+
+//? ==============  var-02.map-get (break-points) ==============
+$break-points: (
+    mobile: 320px,
+    mobile-xl: 575px,
+    tablet: 767px,
+    tablet-xl: 992px,
+    desktop: 1600px,
+);
+
+//? ======== var-03.map-get --> getBreakPoint  (break-points) ========
+@function getBreakPoint($key) {
+    @return map-get($break-points, $key);
+}

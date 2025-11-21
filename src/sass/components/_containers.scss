@@ -1,0 +1,39 @@
+.container {
+    width: 100%;
+    min-width: 320px;
+    max-width: 1600px;
+    // padding: 0 15px;
+    margin: 0 auto;
+    // outline: 1px solid tomato;
+    
+    //! Медіа-запити
+    @media screen and (min-width: getBreakPoint(mobile)) {
+        width: getBreakPoint(mobile);
+        // outline: 1px solid green;
+        padding: 0 15px;
+    }
+    
+    @media screen and (min-width: getBreakPoint(mobile-xl)) {
+        width: getBreakPoint(mobile-xl);
+        // outline: 1px solid green;
+        padding: 0 32px;
+    }
+    
+    @media screen and (min-width: getBreakPoint(tablet)) {
+        width: getBreakPoint(tablet);
+        // outline: 1px solid green;
+        padding: 0 38px;
+    }
+
+    @media screen and (min-width: getBreakPoint(tablet-xl)) {
+        width: getBreakPoint(tablet-xl);
+        // outline: 1px solid green;
+        padding: 0 31px;
+    }
+
+    @media screen and (min-width: getBreakPoint(desktop)) {
+        width: getBreakPoint(desktop);
+        // outline: 1px solid green;
+        padding: 0 132px;
+    }
+}

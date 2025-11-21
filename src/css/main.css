@@ -48,4 +48,41 @@ button {
 
 textarea {
   outline: none;
+}
+
+.container {
+  width: 100%;
+  min-width: 320px;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 320px) {
+  .container {
+    width: 320px;
+    padding: 0 15px;
+  }
+}
+@media screen and (min-width: 575px) {
+  .container {
+    width: 575px;
+    padding: 0 32px;
+  }
+}
+@media screen and (min-width: 767px) {
+  .container {
+    width: 767px;
+    padding: 0 38px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .container {
+    width: 992px;
+    padding: 0 31px;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .container {
+    width: 1600px;
+    padding: 0 132px;
+  }
 }/*# sourceMappingURL=main.css.map */
