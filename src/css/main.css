@@ -50,6 +50,11 @@ textarea {
   outline: none;
 }
 
+body {
+  font-family: "Poppins";
+  color: #8f95a5;
+}
+
 .container {
   width: 100%;
   min-width: 320px;

@@ -20,6 +20,12 @@ $light: (
     fifth: #c4c4c4,
 );
 
+$var-maps: (
+  "main": $main,
+  "dark": $dark,
+  "light": $light,
+);
+
 @function get-var($variable-name) {
   $parts: string.split($variable-name, '__');
   $prefix: nth($parts, 1);
