@@ -1,0 +1,163 @@
+.hero {
+    padding-bottom: 51px;
+
+    .container {
+        @include flex;
+        flex-direction: column;
+        gap: 16px;
+
+        @media screen and (min-width: getBreakPoint(tablet)) {
+            flex-direction: row;
+            gap: 0px;
+        }
+
+        @media screen and (min-width: getBreakPoint(desktop)) {
+            gap: 163px;
+        }
+    }
+
+    &__content {
+        position: relative;
+        text-align: center;
+        order: 0;
+
+        @media screen and (min-width: getBreakPoint(tablet)) {
+            text-align: start;
+            padding-top: 40px;
+        }
+
+        @media screen and (min-width: getBreakPoint(desktop)) {
+            padding-top: 85px;
+        }
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 150%;
+        color: get-var(dark__first);
+        margin-bottom: 20px;
+
+        @media screen and (min-width: getBreakPoint(mobile-xl)) {
+            line-height: 132%;
+            font-size: 34px;
+            margin-bottom: 26px;
+        }
+
+        @media screen and (min-width: getBreakPoint(tablet)) {
+            max-width: 217px;
+            margin-bottom: 25px;
+            font-size: 36px;
+            line-height: 125%;
+        }
+
+        @media screen and (min-width: getBreakPoint(tablet-xl)) {
+            font-size: 48px;
+            line-height: 133%;
+            max-width: 290px;
+            margin-bottom: 27px;
+            white-space: pre;
+        }
+
+        @media screen and (min-width: getBreakPoint(desktop)) {
+            line-height: 125%;
+            font-size: 64px;
+            margin-bottom: 40px;
+            max-width: 386px;
+        }
+    }
+
+    &__description {
+        font-size: 14px;
+        margin-bottom: 35px;
+
+        @media screen and (min-width: getBreakPoint(mobile-xl)) {
+            margin-bottom: 37px;
+            font-size: 16px;
+        }
+
+        @media screen and (min-width: getBreakPoint(tablet)) {
+            max-width: 339px;
+            margin-bottom: 32px;
+        }
+
+        @media screen and (min-width: getBreakPoint(tablet-xl)) {
+            font-size: 20px;
+            max-width: 418px;
+            margin-bottom: 33px;
+        }
+
+        @media screen and (min-width: getBreakPoint(desktop)) {
+            font-size: 24px;
+            max-width: 526px;
+            margin-bottom: 61px;
+        }
+    }
+
+    &__svg {
+        display: none;
+
+        @media screen and (min-width: getBreakPoint(tablet)) {
+            display: block;
+            position: absolute;
+            left: 217px;
+            top: 95px;
+        }
+
+        @media screen and (min-width: getBreakPoint(tablet-xl)) {
+            left: 294px;
+            top: 135px;
+        }
+
+        @media screen and (min-width: getBreakPoint(desktop)) {
+            left: 400px;
+            top: 200px;
+        }
+    }
+
+    &__button {
+        @include button(289px, 60px);
+        margin: 0 auto;
+
+        @media screen and (min-width: getBreakPoint(mobile-xl)) {
+            @include button(305px, 75px, 18px);
+        }
+
+        @media screen and (min-width: getBreakPoint(tablet)) {
+            @include button(236px, 65px);
+            margin: 0;
+        }
+
+        @media screen and (min-width: getBreakPoint(tablet-xl)) {
+            @include button(292px, 80px, 24px);
+        }
+
+        @media screen and (min-width: getBreakPoint(desktop)) {
+            @include button(438px, 118px, 36px, 15px);
+        }
+    }
+
+    &__img {
+        order: -1;
+        width: 299px;
+
+        @media screen and (min-width: getBreakPoint(mobile-xl)) {
+            width: 424px;
+            margin: 0 auto;
+        }
+
+        @media screen and (min-width: getBreakPoint(tablet)) {
+            width: 352px;
+            margin: 0;
+            order: 1;
+        }
+
+        @media screen and (min-width: getBreakPoint(tablet-xl)) {
+            width: 460px;
+        }
+
+        @media screen and (min-width: getBreakPoint(desktop)) {
+            width: 661px;
+        }
+    }
+}

@@ -1,0 +1,8 @@
+.logo {
+    font-size: 24px;
+    color: get-var(dark__first);
+
+    &--grey {
+        color: get-var(light__second);
+    }
+}

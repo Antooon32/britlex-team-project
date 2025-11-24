@@ -1,0 +1,90 @@
+.header {
+    padding-top: 46px;
+    padding-bottom: 36px;
+
+    @media screen and (min-width: getBreakPoint(mobile-xl)) {
+        padding-top: 50px;
+        padding-bottom: 21px;
+    }
+
+    @media screen and (min-width: getBreakPoint(tablet)) {
+        padding-top: 45px;
+        padding-bottom: 22px;
+    }
+
+    @media screen and (min-width: getBreakPoint(tablet-xl)) {
+        padding-top: 25px;
+        padding-bottom: 28px;
+    }
+
+    @media screen and (min-width: getBreakPoint(desktop)) {
+        padding-bottom: 0;
+    }
+
+    .container {
+        @include flex;
+        gap: 89px;
+        align-items: center;
+
+        @media screen and (min-width: getBreakPoint(mobile-xl)) {
+            gap: 197px;
+        }
+
+        @media screen and (min-width: getBreakPoint(tablet)) {
+            gap: 287px;
+        }
+
+        @media screen and (min-width: getBreakPoint(tablet-xl)) {
+            gap: 0px;
+        }
+    }
+
+    .logo {
+        @media screen and (min-width: getBreakPoint(tablet-xl)) {
+            margin-right: 167px;
+        }
+
+        @media screen and (min-width: getBreakPoint(desktop)) {
+            margin-right: 347px;
+        }
+    }
+
+    .nav-list {
+        display: none;
+
+        @media screen and (min-width: getBreakPoint(tablet-xl)) {
+            @include flex;
+            gap: 36px;
+            margin-right: 99px;
+        }
+
+        @media screen and (min-width: getBreakPoint(desktop)) {
+            margin-right: 322px;
+        }
+
+        &__link {
+            font-weight: 500;
+            color: get-var(main__second);
+        }
+    }
+
+    &__button {
+        display: none;
+
+        @media screen and (min-width: getBreakPoint(tablet-xl)) {
+            @include flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid get-var(main__second);
+            border-radius: 5px;
+            width: 160px;
+            height: 50px;
+        }
+    }
+
+    .burger-menu__open {
+        @media screen and (min-width: getBreakPoint(tablet-xl)) {
+            display: none;
+        }
+    }
+}
