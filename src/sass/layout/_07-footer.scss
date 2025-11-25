@@ -1,0 +1,108 @@
+.footer {
+    position: relative;
+    padding: 40px 0 30px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 1px;
+        background: get-var(light__third);
+        width: 290px; 
+    }
+
+    @media screen and (min-width: getBreakPoint(mobile-xl)) {
+        padding: 42px 0 35px;
+
+        &::before {
+            width: 510px;
+        }
+    }
+
+    @media screen and (min-width: getBreakPoint(tablet)) {
+        padding: 45px 0 40px;
+
+        &::before {
+            width: 690px;
+        }
+    }
+
+    @media screen and (min-width: getBreakPoint(tablet-xl)) {
+        padding: 58px 0 45px;
+
+        &::before {
+            width: 929px;
+        }
+    }
+
+    @media screen and (min-width: getBreakPoint(desktop)) {
+        padding: 70px 0 50px;
+
+        &::before {
+            width: 1338px;
+        }
+    }
+
+    // Контейнер футера
+    &__container {
+        @include flex;
+        flex-direction: column;
+        gap: 24px;
+        text-align: center;
+
+        @media screen and (min-width: getBreakPoint(tablet)) {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            text-align: left;
+        }
+    }
+
+    // Логотип
+    &__logo {
+        font-size: 28px;
+        font-weight: 600;
+        color: get-var(dark__first);
+
+        span {
+            color: get-var(dark__second);
+        }
+
+        @media screen and (min-width: getBreakPoint(desktop)) {
+            font-size: 32px;
+        }
+    }
+
+    // Список лінків
+    &__links {
+        @include flex;
+        flex-direction: row; 
+        flex-wrap: wrap;       
+        justify-content: center;
+        gap: 10px;
+
+        @media screen and (min-width: getBreakPoint(tablet)) {
+            flex-wrap: nowrap;
+            justify-content: flex-end;
+            gap: 26px;
+        }
+    }
+
+    // Кожне посилання
+    &__link {
+        font-size: 11px;
+        color: get-var(dark__second);
+        white-space: nowrap; 
+        transition: color 0.2s ease;
+
+        &:hover {
+            color: get-var(main__second);
+        }
+
+        @media screen and (min-width: getBreakPoint(desktop)) {
+            font-size: 16px;
+        }
+    }
+}

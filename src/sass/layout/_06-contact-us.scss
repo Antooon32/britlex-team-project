@@ -1,0 +1,168 @@
+.contact {
+    padding-bottom: 60px;
+
+    @media screen and (min-width: getBreakPoint(tablet)) {
+        padding-bottom: 90px;
+    }
+
+    @media screen and (min-width: getBreakPoint(desktop)) {
+        padding-bottom: 150px;
+    }
+
+    &__container {
+        @include flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 40px;
+
+        @media screen and (min-width: getBreakPoint(tablet)) {
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: center;
+            text-align: left;
+            gap: 60px;
+        }
+
+        @media screen and (min-width: getBreakPoint(desktop)) {
+            gap: 110px;
+        }
+    }
+
+    /* ---------------------- IMAGE ---------------------- */
+    &__img-wrapper {
+        margin: 0 auto;
+
+        // Mobile
+        width: 253px;
+
+        @media screen and (min-width: getBreakPoint(mobile-xl)) {
+            // Mobile-xl
+            width: 358px;
+        }
+
+        @media screen and (min-width: getBreakPoint(tablet)) {
+            // Tablet
+            width: 233px;
+        }
+
+        @media screen and (min-width: getBreakPoint(tablet-xl)) {
+            // Tablet-xl
+            width: 312px;
+        }
+
+        @media screen and (min-width: getBreakPoint(desktop)) {
+            // Desktop
+            width: 477px;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        display: block;
+    }
+
+    /* ---------------------- CONTENT ---------------------- */
+    &__content {
+        max-width: 420px;
+
+        @media screen and (min-width: getBreakPoint(desktop)) {
+            max-width: 520px;
+        }
+    }
+
+    &__title {
+        font-weight: 600;
+        color: get-var(dark__first);
+        margin-bottom: 20px;
+
+        font-size: 24px;
+        line-height: 1.3;
+
+        @media screen and (min-width: getBreakPoint(tablet)) {
+            font-size: 30px;
+            margin-bottom: 18px;
+        }
+
+        @media screen and (min-width: getBreakPoint(desktop)) {
+            font-size: 48px;
+            margin-bottom: 30px;
+        }
+    }
+
+    &__text {
+        font-size: 14px;
+        line-height: 1.6;
+        color: get-var(dark__second);
+        margin-bottom: 32px;
+
+        @media screen and (min-width: getBreakPoint(desktop)) {
+            font-size: 18px;
+            max-width: 450px;
+            margin-bottom: 40px;
+        }
+    }
+
+    /* ---------------------- FORM ---------------------- */
+    &__form {
+        width: 100%;
+        @include flex;
+        flex-direction: column;
+        gap: 14px;
+
+        @media screen and (min-width: getBreakPoint(tablet)) {
+            flex-direction: row;
+            align-items: center;
+            gap: 12px;
+        }
+
+        @media screen and (min-width: getBreakPoint(desktop)) {
+            gap: 18px;
+        }
+    }
+
+    &__input {
+        width: 100%;
+        padding: 16px 20px;
+        border: 1px solid get-var(light__third);
+        border-radius: 5px;
+
+        font-size: 14px;
+        outline: none;
+        color: get-var(dark__first);
+
+        @media screen and (min-width: getBreakPoint(tablet)) {
+            height: 52px;
+            font-size: 16px;
+        }
+
+        @media screen and (min-width: getBreakPoint(desktop)) {
+            height: 56px;
+            font-size: 18px;
+        }
+    }
+
+    &__button {
+        background: get-var(main__second);
+        color: get-var(light__first);
+        font-weight: 600;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+
+        padding: 20px 28px;
+        font-size: 16px;
+
+        @media screen and (min-width: getBreakPoint(tablet)) {
+            height: 52px;
+            padding: 0 34px;
+        }
+
+        @media screen and (min-width: getBreakPoint(desktop)) {
+            height: 56px;
+            font-size: 18px;
+            padding: 0 55px;
+            border-radius: 10px;
+        }
+    }
+}
