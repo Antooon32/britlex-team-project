@@ -66,6 +66,7 @@
             margin-bottom: 25px;
             font-size: 36px;
             line-height: 125%;
+            white-space: pre-line;
         }
 
         @media screen and (min-width: getBreakPoint(tablet-xl)) {
@@ -119,18 +120,22 @@
             position: absolute;
             left: 217px;
             top: 95px;
-            width: 100px;
-            height: 100px;
+            width: 81px;
+            height: 81px;
         }
 
         @media screen and (min-width: getBreakPoint(tablet-xl)) {
             left: 294px;
             top: 135px;
+            width: 89px;
+            height: 89px;
         }
 
         @media screen and (min-width: getBreakPoint(desktop)) {
             left: 400px;
             top: 200px;
+            width: 115px;
+            height: 115px;
         }
     }
 
