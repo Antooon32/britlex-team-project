@@ -1,0 +1,222 @@
+.pricing {
+    padding-bottom: 50px;
+
+    @media screen and (min-width: getBreakPoint(mobile-xl)) {
+        padding-bottom: 60px;
+    }
+
+    @media screen and (min-width: getBreakPoint(tablet)) {
+        padding-bottom: 80px;
+    }
+
+    @media screen and (min-width: getBreakPoint(tablet-xl)) {
+        padding-bottom: 100px;
+    }
+
+    @media screen and (min-width: getBreakPoint(desktop)) {
+        padding-bottom: 160px;
+    }
+
+    &__title {
+        font-weight: 600;
+        text-align: center;
+        color: get-var(dark__first);
+
+        font-size: 24px;
+        line-height: 3.33;
+        margin-bottom: 36px;
+
+        @media screen and (min-width: getBreakPoint(tablet)) {
+            font-size: 30px;
+            line-height: 2.67;
+            margin-bottom: 48px;
+        }
+
+        @media screen and (min-width: getBreakPoint(tablet-xl)) {
+            font-size: 36px;
+            line-height: 2.22;
+            margin-bottom: 60px;
+        }
+
+        @media screen and (min-width: getBreakPoint(desktop)) {
+            font-size: 48px;
+            line-height: 1.67;
+            margin-bottom: 96px;
+        }
+    }
+
+    .pricing-list {
+        @include flex;
+        flex-direction: column;
+        gap: 52px;
+
+        @media screen and (min-width: getBreakPoint(tablet)) {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        @media screen and (min-width: getBreakPoint(tablet-xl)) {
+            gap: 40px;
+        }
+
+        @media screen and (min-width: getBreakPoint(desktop)) {
+            gap: 56px;
+        }
+
+        &__item {
+            text-align: center;
+            max-width: 310px;
+            margin: 0 auto;
+
+            @media screen and (min-width: getBreakPoint(tablet)) {
+                max-width: 100%;
+            }
+        }
+
+        /* ============ КАРТИНКИ ЗА МАКЕТОМ ============ */
+
+        &__img {
+            width: 100%;
+            margin: 0 auto 24px;
+        }
+
+        /* 🟥 1-ша картинка */
+        .pricing-list__item:nth-child(1) .pricing-list__img {
+
+            max-width: 201px; // mobile
+
+            @media screen and (min-width: getBreakPoint(mobile-xl)) {
+                max-width: 271px;
+            }
+
+            @media screen and (min-width: getBreakPoint(tablet)) {
+                max-width: 197px;
+            }
+
+            @media screen and (min-width: getBreakPoint(tablet-xl)) {
+                max-width: 223px;
+            }
+
+            @media screen and (min-width: getBreakPoint(desktop)) {
+                max-width: 328px;
+            }
+        }
+
+        /* 🟦 2-га картинка */
+        .pricing-list__item:nth-child(2) .pricing-list__img {
+
+            max-width: 213px; // mobile
+
+            @media screen and (min-width: getBreakPoint(mobile-xl)) {
+                max-width: 286px;
+            }
+
+            @media screen and (min-width: getBreakPoint(tablet)) {
+                max-width: 205px;
+            }
+
+            @media screen and (min-width: getBreakPoint(tablet-xl)) {
+                max-width: 241px;
+            }
+
+            @media screen and (min-width: getBreakPoint(desktop)) {
+                max-width: 350px;
+            }
+        }
+
+        /* 🟩 3-тя картинка */
+        .pricing-list__item:nth-child(3) .pricing-list__img {
+
+            max-width: 205px; // mobile
+
+            @media screen and (min-width: getBreakPoint(mobile-xl)) {
+                max-width: 276px;
+            }
+
+            @media screen and (min-width: getBreakPoint(tablet)) {
+                max-width: 193px;
+            }
+
+            @media screen and (min-width: getBreakPoint(tablet-xl)) {
+                max-width: 230px;
+            }
+
+            @media screen and (min-width: getBreakPoint(desktop)) {
+                max-width: 341px;
+            }
+        }
+
+        /* ============================================= */
+
+        &__name {
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 1.4;
+            color: get-var(main__second);
+            margin-bottom: 14px;
+
+            @media screen and (min-width: getBreakPoint(tablet)) {
+                font-size: 20px;
+            }
+
+            @media screen and (min-width: getBreakPoint(tablet-xl)) {
+                font-size: 22px;
+            }
+
+            @media screen and (min-width: getBreakPoint(desktop)) {
+                font-size: 26px;
+            }
+        }
+
+        &__description {
+            font-size: 14px;
+            line-height: 1.6;
+            color: get-var(dark__second);
+            margin: 0 auto 22px;
+            max-width: 280px;
+
+            @media screen and (min-width: getBreakPoint(tablet)) {
+                max-width: 260px;
+                margin-bottom: 18px;
+            }
+
+            @media screen and (min-width: getBreakPoint(desktop)) {
+                font-size: 18px;
+                max-width: 330px;
+                margin-bottom: 26px;
+            }
+        }
+
+        &__price {
+            font-weight: 600;
+            font-size: 16px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 18px;
+            border-radius: 6px;
+            background: get-var(light__sixth);
+            color: get-var(dark__first);
+
+            @media screen and (min-width: getBreakPoint(tablet)) {
+                font-size: 18px;
+            }
+
+            @media screen and (min-width: getBreakPoint(desktop)) {
+                font-size: 20px;
+                padding: 14px 20px;
+            }
+        }
+
+        &__period {
+            font-weight: 400;
+            font-size: 14px;
+            color: get-var(dark__second);
+
+            @media screen and (min-width: getBreakPoint(desktop)) {
+                font-size: 16px;
+            }
+        }
+    }
+}
