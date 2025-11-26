@@ -40,6 +40,12 @@
     }
 
     .logo {
+        @include multi-transition(color);
+
+        &:hover {
+            color: get-var(light__seventh);
+        }
+
         @media screen and (min-width: getBreakPoint(tablet-xl)) {
             margin-right: 167px;
         }
@@ -65,11 +71,24 @@
         &__link {
             font-weight: 500;
             color: get-var(main__second);
+            @include multi-transition(color);
+
+            &:hover {
+                color: get-var(light__seventh);
+            }
         }
     }
 
     &__button {
         display: none;
+        cursor: pointer;
+        @include multi-transition((background-color, color, transform));
+
+        &:hover {
+            background-color: get-var(main__second);
+            color: get-var(light__first);
+            transform: scale(1.12);
+        }
 
         @media screen and (min-width: getBreakPoint(tablet-xl)) {
             @include flex;
