@@ -18,8 +18,8 @@
 
     <!-- <link rel="stylesheet" href="./css/main.min.css"> -->
     
-  <script type="module" crossorigin src="/britlex-team-project/assets/index-859f1443.js"></script>
-  <link rel="stylesheet" href="/britlex-team-project/assets/index-dfaccf7c.css">
+  <script type="module" crossorigin src="/britlex-team-project/assets/index-29b06455.js"></script>
+  <link rel="stylesheet" href="/britlex-team-project/assets/index-ee493044.css">
 </head>
 
 <body>
@@ -72,9 +72,10 @@
             <h1 class="hero__title">Learn
 Any Foreign
 Language</h1>
-            <svg class="hero__svg" width="72px" height="72px">
+            <svg class="hero__svg">
                 <use href="/britlex-team-project/img/lamp.svg"></use>
             </svg>
+            <!-- <img class="hero__svg" src="/img/lamp.svg" alt="lamp"> -->
             <p class="hero__description">With our teachers who write a program for
                 each student, you will be able to make your
                 first sketch after the first lesson.</p>
@@ -213,11 +214,7 @@ Language</h1>
     <section class="contact">
     <div class="container contact__container">
         <div class="contact__img-wrapper">
-            <img 
-                class="contact__img" 
-                src="/britlex-team-project/img/paper-plane.svg" 
-                alt="Person sending paper plane"
-            >
+            <img class="contact__img" src="/britlex-team-project/img/paper-plane.svg" alt="Person sending paper plane">
         </div>
 
         <div class="contact__content">
@@ -228,17 +225,8 @@ Language</h1>
             </p>
 
             <form class="contact__form">
-                <input 
-                    class="contact__input" 
-                    type="email" 
-                    name="email" 
-                    placeholder="Enter Your E-mail"
-                    required
-                >
-                <button 
-                    class="contact__button" 
-                    type="submit"
-                >
+                <input class="contact__input" type="email" name="email" placeholder="Enter Your E-mail" required>
+                <button class="contact__button" type="submit">
                     Subscribe
                 </button>
             </form>
@@ -247,11 +235,13 @@ Language</h1>
 </section>
     </main>
     <footer>
-    <section>
-    <footer class="footer">
+    <section class="footer">
     <div class="container footer__container">
 
-        <p class="footer__logo">Britlex</p>
+        <p class="footer__logo">
+            Brit<span>lex</span>
+        </p>
+
 
         <ul class="footer__links">
             <li class="footer__links-item">
@@ -264,11 +254,19 @@ Language</h1>
                 <a class="footer__link" href="#">Cookie Policy</a>
             </li>
         </ul>
-
     </div>
-</footer>
 </section>
     </footer>
+
+   <div class="britlex-loader">
+    <svg class="britlex-loader__spinner" viewBox="0 0 100 100">
+        <circle class="path" cx="50" cy="50" r="45" />
+    </svg>
+
+    <p class="britlex-loader__text">Brit<span>lex</span></p>
+</div>
+
+
 
     
 </body>
