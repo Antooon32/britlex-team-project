@@ -1,22 +1,47 @@
+// === PARTIALS LOADER ===
+
+async function loadPartials() {
+    const elements = document.querySelectorAll('load');
+
+    for (const el of elements) {
+        // підтримка синтаксису: <load src="partials/..."></load>
+        const file = el.getAttribute('src');
+
+        if (!file) continue;
+
+        try {
+            const res = await fetch(file);
+            const html = await res.text();
+
+            // замінюємо <load> на завантажений HTML
+            el.insertAdjacentHTML('afterend', html);
+            el.remove();
+
+        } catch (err) {
+            console.error("Помилка завантаження partial:", file, err);
+        }
+    }
+
+    // 👉 повідомляємо, що partials завантажені
+    document.dispatchEvent(new Event('partialsLoaded'));
+}
+
+loadPartials();
+
+
+
+// === LOADER ANIMATION (твій оригінальний код) ===
+
 document.addEventListener("DOMContentLoaded", () => {
     const loader = document.querySelector(".britlex-loader");
-
-    // Блокуємо скрол, поки показується лоадер
     document.body.style.overflow = "hidden";
 
-    // Даємо сторінці догрузитися
     window.addEventListener("load", () => {
         setTimeout(() => {
-            // Додаємо клас для плавного зникнення
             loader.classList.add("britlex-loader--hide");
-
-            // Повертаємо скрол
             document.body.style.overflow = "auto";
 
-            // Видаляємо лоадер з DOM після анімації
-            setTimeout(() => {
-                loader.remove();
-            }, 700);
-        }, 400); // Затримка, щоб лоадер виглядав плавно
+            setTimeout(() => loader.remove(), 700);
+        }, 400);
     });
 });
