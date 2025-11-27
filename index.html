@@ -24,18 +24,241 @@
 
 <body>
     <!-- Loads the specified .html file -->
-    <header>
-    <load src="./partials/01-header.html"></load>
+<header>
+    <section class="header">
+    <div class="container">
+        <a href="#" class="logo">Brit<span class="logo--grey">lex</span></a>
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-list__item"><a class="nav-list__link" href="#">Home</a></li>
+                <li class="nav-list__item"><a class="nav-list__link" href="#skills">Skills</a></li>
+                <li class="nav-list__item"><a class="nav-list__link" href="#about-us">About Us</a></li>
+                <li class="nav-list__item"><a class="nav-list__link" href="#pricing">Pricing</a></li>
+                <li class="nav-list__item"><a class="nav-list__link" href="#contact">Contacts</a></li>
+            </ul>
+        </nav>
+        <button class="header__button">Let’s Talk</button>
+        <button class="burger-menu__open" data-burger-open>
+            <svg width="34px" height="19px">
+                <use href="/britlex-team-project/img/sprite.svg#icon-burger"></use>
+            </svg>
+        </button>
+        <div class="backdrop" data-backdrop></div>
+        <div class="burger-menu" data-burger>
+            <div class="container bcontainer">
+                <button class="burger-menu__close" data-burger-close>
+                    <svg width="39px" height="39px">
+                        <use href="/britlex-team-project/img/sprite.svg#burger-close"></use>
+                    </svg>
+                </button>
+
+                <a href="#" class="logo">Brit<span class="logo--grey">lex</span></a>
+                <nav class="bnav">
+                    <ul class="bnav-list">
+                        <li class="bnav-list__item"><a class="nav-list__link" href="#hero">Home</a></li>
+                        <li class="bnav-list__item"><a class="nav-list__link" href="#skills">Skills</a></li>
+                        <li class="bnav-list__item"><a class="nav-list__link" href="#about-us">About Us</a></li>
+                        <li class="bnav-list__item"><a class="nav-list__link" href="#pricing">Pricing</a></li>
+                        <li class="bnav-list__item"><a class="nav-list__link" href="#contact">Contacts</a></li>
+                    </ul>
+                </nav>
+                <button class="burger-menu__button">Let’s Talk</button>
+            </div>
+        </div>
+    </div>
+</section>
 </header>
 <main>
-    <load src="./partials/02-hero.html"></load>
-    <load src="./partials/03-skills.html"></load>
-    <load src="./partials/04-about-us.html"></load>
-    <load src="./partials/05-pricing.html"></load>
-    <load src="./partials/06-contact-us.html"></load>
+    <section id="hero" class="hero">
+    <div class="container">
+        <div class="hero__content">
+            <h1 class="hero__title">Learn
+Any Foreign
+Language</h1>
+            <!-- <svg class="hero__svg">
+                <use href="/img/lamp.svg"></use>
+            </svg> -->
+            <img class="hero__svg" src="/britlex-team-project/img/lamp.svg" alt="lamp">
+            <p class="hero__description">With our teachers who write a program for
+                each student, you will be able to make your
+                first sketch after the first lesson.</p>
+            <button class="hero__button">Get started</button>
+        </div>
+        <img class="hero__img" src="/britlex-team-project/img/girl-translator.svg" alt="girl-translator">
+    </div>
+</section>
+    <section id="skills" class="skills">
+    <div class="container">
+        <h2 class="skills__title">Skills</h2>
+        <ul class="skills-list">
+            <li class="skills-list__item a">
+                <img class="skills-list__img" src="/britlex-team-project/img/document-sharing.svg" alt="document-sharing">
+                <div class="skills-list__content">
+                    <h3 class="skills-list__title">Speaking</h3>
+                    <p class="skills-list__description">Improve your English skills
+                        and confidence. Live classes
+                        and interactive lessons online.
+                        20% extra free for a limited
+                        time only
+
+                        
+                        Learn English online and
+                        improve your
+                        skills through our high-quality
+                        courses and resources – all
+                        designed for adult language
+                        learners.</p>
+                    <button class="skills-list__button">Learn more</button>
+                </div>
+            </li>
+            <li class="skills-list__item b">
+                <img class="skills-list__img" src="/britlex-team-project/img/typewriter.svg" alt="typewriter">
+                <div class="skills-list__content">
+                    <h3 class="skills-list__title">Writing</h3>
+                    <p class="skills-list__description">One of the most important and extensive
+                        areas of natural science, the science that
+                        studies substances, also their composition </p>
+                    <button class="skills-list__button">Learn more</button>
+                </div>
+            </li>
+            <li class="skills-list__item c">
+                <img class="skills-list__img" src="/britlex-team-project/img/reading.svg" alt="reading">
+                <div class="skills-list__content">
+                    <h3 class="skills-list__title">Reading</h3>
+                    <p class="skills-list__description">perception and response actions of the user
+                        resulting from the use and/or upcoming use
+                        of the product, system or service</p>
+                    <button class="skills-list__button">Learn more</button>
+                </div>
+            </li>
+            <li class="skills-list__item d">
+                <img class="skills-list__img" src="/britlex-team-project/img/podcast-audience.svg" alt="podcast-audience">
+                <div class="skills-list__content">
+                    <h3 class="skills-list__title">Listening</h3>
+                    <p class="skills-list__description">Here you can find activities to practise
+                        your listening skills. Listening will help you
+                        to improve your understanding </p>
+                    <button class="skills-list__button">Learn more</button>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+    <section id="about-us" class="about-us">
+    <div class="container">
+        <h2 class="about-us__title">About Us</h2>
+        <div class="about-us__content">
+            <h2 class="about-us__title2">About Us</h2>
+            <p class="about-us__description">
+                The model offers a framework for discussing problems related to the user's experience, as well as
+                possible ways and means of solving them. Application development begins at the top level (strategy),
+                where the future software product is described quite abstractly from the point of view of the
+                expectations of both users and the customer.
+            </p>
+            <ul class="about-us-list">
+                <li class="about-us-list__item">
+                    <h3 class="about-us-list__number">800</h3>
+                    <p class="about-us-list__description">Pupils</p>
+                </li>
+                <li class="about-us-list__item">
+                    <h3 class="about-us-list__number">18</h3>
+                    <p class="about-us-list__description">Teachers</p>
+                </li>
+                <li class="about-us-list__item">
+                    <h3 class="about-us-list__number">6</h3>
+                    <p class="about-us-list__description">Foreign languages</p>
+                </li>
+            </ul>
+        </div>
+        <img class="about-us__img" src="/britlex-team-project/img/business-competition.svg" alt="business-competition">
+    </div>
+</section>
+    <section id="pricing" class="pricing">
+    <div class="container">
+        <h2 class="pricing__title">Pricing</h2>
+
+        <ul class="pricing-list">
+            <li class="pricing-list__item">
+                <img class="pricing-list__img" src="/britlex-team-project/img/online-test.svg" alt="Self-study illustration">
+                <h3 class="pricing-list__name">Self-study online course</h3>
+                <p class="pricing-list__description">
+                    Start learning English online in live classes with qualified EC teachers and students
+                    from all over the world
+                </p>
+                <p class="pricing-list__price">
+                    £5.99 <span class="pricing-list__period">per month</span>
+                </p>
+            </li>
+
+            <li class="pricing-list__item">
+                <img class="pricing-list__img" src="/britlex-team-project/img/lesso.svg" alt="Live classes illustration">
+                <h3 class="pricing-list__name">Live online classes</h3>
+                <p class="pricing-list__description">
+                    Interactive group classes with expert teachers. Free 7-day trial
+                </p>
+                <p class="pricing-list__price">
+                    £12.99 <span class="pricing-list__period">per month</span>
+                </p>
+            </li>
+
+            <li class="pricing-list__item">
+                <img class="pricing-list__img" src="/britlex-team-project/img/webinar.svg" alt="Personal tuition illustration">
+                <h3 class="pricing-list__name">Personal Tuition</h3>
+                <p class="pricing-list__description">
+                    Online one-to-one English tutoring – enjoy our first session for only $1
+                </p>
+                <p class="pricing-list__price">
+                    £20.99 <span class="pricing-list__period">per month</span>
+                </p>
+            </li>
+        </ul>
+    </div>
+</section>
+    <section id="contact" class="contact">
+    <div class="container contact__container">
+        <div class="contact__img-wrapper">
+            <img class="contact__img" src="/britlex-team-project/img/paper-plane.svg" alt="Person sending paper plane">
+        </div>
+
+        <div class="contact__content">
+            <h2 class="contact__title">Contact Us</h2>
+            <p class="contact__text">
+                Discover your current English level by taking our free online English test.
+                Sign up to our newsletter for learning tips and free resources.
+            </p>
+
+            <form class="contact__form">
+                <input class="contact__input" type="email" name="email" placeholder="Enter Your E-mail" required>
+                <button class="contact__button" type="submit">
+                    Subscribe
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
 </main>
 <footer>
-    <load src="./partials/07-footer.html"></load>
+    <section class="footer">
+    <div class="container footer__container">
+
+        <p class="footer__logo">
+            Brit<span>lex</span>
+        </p>
+
+
+        <ul class="footer__links">
+            <li class="footer__links-item">
+                <a class="footer__link" href="#">Terms and Conditions</a>
+            </li>
+            <li class="footer__links-item">
+                <a class="footer__link" href="#">Privacy Policy</a>
+            </li>
+            <li class="footer__links-item">
+                <a class="footer__link" href="#">Cookie Policy</a>
+            </li>
+        </ul>
+    </div>
+</section>
 </footer>
 
    <div class="britlex-loader">
