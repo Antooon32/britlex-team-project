@@ -1,20 +1,20 @@
 .pricing {
-    padding-bottom: 50px;
+    padding-bottom: 72px;
 
     @media screen and (min-width: getBreakPoint(mobile-xl)) {
-        padding-bottom: 60px;
+        padding-bottom: 163px;
     }
 
     @media screen and (min-width: getBreakPoint(tablet)) {
-        padding-bottom: 80px;
+        padding-bottom: 94px;
     }
 
     @media screen and (min-width: getBreakPoint(tablet-xl)) {
-        padding-bottom: 100px;
+        padding-bottom: 141px;
     }
 
     @media screen and (min-width: getBreakPoint(desktop)) {
-        padding-bottom: 160px;
+        padding-bottom: 257px;
     }
 
     &__title {
@@ -22,7 +22,7 @@
         text-align: center;
         color: get-var(dark__first);
 
-        font-size: 24px;
+        font-size: 22px;
         line-height: 3.33;
         margin-bottom: 36px;
 
@@ -48,17 +48,13 @@
     .pricing-list {
         @include flex;
         flex-direction: column;
-        gap: 52px;
 
         @media screen and (min-width: getBreakPoint(tablet)) {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
         }
 
-        @media screen and (min-width: getBreakPoint(tablet-xl)) {
-            gap: 40px;
-        }
+        @media screen and (min-width: getBreakPoint(tablet-xl)) {}
 
         @media screen and (min-width: getBreakPoint(desktop)) {
             gap: 56px;
@@ -66,127 +62,159 @@
 
         &__item {
             text-align: center;
-            max-width: 310px;
+            width: 310px;
             margin: 0 auto;
 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 50px;
+
             @media screen and (min-width: getBreakPoint(tablet)) {
-                max-width: 100%;
+              max-width: 220px;
+            }
+
+             @media screen and (min-width: getBreakPoint(tablet-xl)) {
+              max-width: 295px;
+            }
+
+             @media screen and (min-width: getBreakPoint(desktop)) {
+              max-width: 375px;
             }
         }
 
-        /* ============ КАРТИНКИ ЗА МАКЕТОМ ============ */
+        /* ===================== КАРТИНКИ ===================== */
 
         &__img {
             width: 100%;
             margin: 0 auto 24px;
+            height: 220px;
+            object-fit: contain;
         }
 
-        /* 🟥 1-ша картинка */
+        /* Макетні width (залишаєм твої!) */
+
         .pricing-list__item:nth-child(1) .pricing-list__img {
-
-            max-width: 201px; // mobile
+            width: 248px;
 
             @media screen and (min-width: getBreakPoint(mobile-xl)) {
-                max-width: 271px;
+                width: 291px;
             }
 
             @media screen and (min-width: getBreakPoint(tablet)) {
-                max-width: 197px;
+                width: 197px;
             }
 
             @media screen and (min-width: getBreakPoint(tablet-xl)) {
-                max-width: 223px;
+                width: 222px;
             }
 
             @media screen and (min-width: getBreakPoint(desktop)) {
-                max-width: 328px;
+                width: 311px;
             }
         }
 
-        /* 🟦 2-га картинка */
         .pricing-list__item:nth-child(2) .pricing-list__img {
-
-            max-width: 213px; // mobile
+            width: 257px;
 
             @media screen and (min-width: getBreakPoint(mobile-xl)) {
-                max-width: 286px;
+                width: 314px;
             }
 
             @media screen and (min-width: getBreakPoint(tablet)) {
-                max-width: 205px;
+                width: 219px;
             }
 
             @media screen and (min-width: getBreakPoint(tablet-xl)) {
-                max-width: 241px;
+                width: 267px;
             }
 
             @media screen and (min-width: getBreakPoint(desktop)) {
-                max-width: 350px;
+                width: 391px;
             }
         }
 
-        /* 🟩 3-тя картинка */
         .pricing-list__item:nth-child(3) .pricing-list__img {
-
-            max-width: 205px; // mobile
+            width: 241px;
 
             @media screen and (min-width: getBreakPoint(mobile-xl)) {
-                max-width: 276px;
+                width: 253px;
             }
 
             @media screen and (min-width: getBreakPoint(tablet)) {
-                max-width: 193px;
+                width: 210px;
             }
 
             @media screen and (min-width: getBreakPoint(tablet-xl)) {
-                max-width: 230px;
+                width: 242px;
             }
 
             @media screen and (min-width: getBreakPoint(desktop)) {
-                max-width: 341px;
+                width: 340px;
             }
         }
 
-        /* ============================================= */
+        /* ===================== ТЕКСТОВИЙ БЛОК ===================== */
+
+        .pricing-text-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+
+            min-height: 150px;
+            width: 100%;
+        }
 
         &__name {
+            font-family: $family, "Poppins";
             font-weight: 600;
-            font-size: 18px;
-            line-height: 1.4;
+            font-size: 19px;
+            line-height: 155%;
+            color: #263238;
             color: get-var(main__second);
             margin-bottom: 14px;
 
             @media screen and (min-width: getBreakPoint(tablet)) {
-                font-size: 20px;
+                font-size: 19px;
+                width: 150px;
+                text-align: left;
             }
 
             @media screen and (min-width: getBreakPoint(tablet-xl)) {
                 font-size: 22px;
+                width: 273px;
+                text-align: center;
             }
 
             @media screen and (min-width: getBreakPoint(desktop)) {
-                font-size: 26px;
+                font-size: 30px;
+                   width: 373px;
+                text-align: center;
             }
         }
 
         &__description {
-            font-size: 14px;
+            font-family: $family, "Poppins";
+            font-weight: 400;
+            font-size: 16px;
             line-height: 1.6;
-            color: get-var(dark__second);
+            color: get-var(main__first);
             margin: 0 auto 22px;
-            max-width: 280px;
+            width: 280px;
 
             @media screen and (min-width: getBreakPoint(tablet)) {
-                max-width: 260px;
-                margin-bottom: 18px;
+                width: 100%;
+                margin-bottom: 14px;
             }
 
             @media screen and (min-width: getBreakPoint(desktop)) {
                 font-size: 18px;
-                max-width: 330px;
+                width: 330px;
                 margin-bottom: 26px;
             }
         }
+
+        /* ===================== ЦІНА ===================== */
 
         &__price {
             font-weight: 600;
@@ -201,6 +229,7 @@
 
             @media screen and (min-width: getBreakPoint(tablet)) {
                 font-size: 18px;
+                margin-top: auto;
             }
 
             @media screen and (min-width: getBreakPoint(desktop)) {
