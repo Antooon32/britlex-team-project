@@ -1,6 +1,7 @@
 // ==== ЛОАДЕР ====
 import './js/loader';
-
+// ==== ПОВІДОМЛЕННЯ ====
+import './js/contact-message';
 // ==== БУРГЕР ====
 import burgerMenu from './js/burger';
 burgerMenu();

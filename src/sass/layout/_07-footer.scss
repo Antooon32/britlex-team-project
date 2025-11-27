@@ -1,3 +1,5 @@
+/* ======= FOOTER ======= */
+
 .footer {
     position: relative;
     padding: 40px 0 30px;
@@ -45,14 +47,18 @@
         }
     }
 
-    // Контейнер футера
+    /* ---------- FOOTER CONTAINER ---------- */
     &__container {
         @include flex;
         flex-direction: column;
         gap: 24px;
         text-align: center;
+        align-items: center; // центр логотипа й лінків на мобайл
+    }
 
-        @media screen and (min-width: getBreakPoint(tablet)) {
+    /* MOBILE-XL (575px+) — усе в рядок */
+    @media screen and (min-width: getBreakPoint(mobile-xl)) {
+        &__container {
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
@@ -60,7 +66,7 @@
         }
     }
 
-    // Логотип
+    /* ---------- LOGO ---------- */
     &__logo {
         font-size: 28px;
         font-weight: 600;
@@ -75,26 +81,42 @@
         }
     }
 
-    // Список лінків
+    /* ---------- LINKS WRAPPER ---------- */
     &__links {
         @include flex;
-        flex-direction: row; 
-        flex-wrap: wrap;       
+        flex-direction: row;
+        flex-wrap: wrap;
         justify-content: center;
-        gap: 10px;
+        gap: 6px;
 
-        @media screen and (min-width: getBreakPoint(tablet)) {
+        @media screen and (min-width: getBreakPoint(mobile-xl)) {
             flex-wrap: nowrap;
             justify-content: flex-end;
-            gap: 26px;
+            gap: 6px;
         }
     }
 
-    // Кожне посилання
+    /* ---------- SPACER DOT "•" ---------- */
+    &__links-item {
+        position: relative;
+        padding-left: 10px;
+
+        &:not(:first-child)::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            color: get-var(dark__second);
+            font-size: 14px;
+        }
+    }
+
+    /* ---------- LINK ---------- */
     &__link {
-        font-size: 11px;
+        font-size: 10px;
         color: get-var(dark__second);
-        white-space: nowrap; 
+        white-space: nowrap;
         transition: color 0.2s ease;
 
         &:hover {
