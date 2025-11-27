@@ -6,3 +6,18 @@
         color: get-var(light__second);
     }
 }
+.logo {
+        @include multi-transition(color);
+
+        &:hover {
+            color: get-var(light__seventh);
+        }
+
+        @media screen and (min-width: getBreakPoint(tablet-xl)) {
+            margin-right: 167px;
+        }
+
+        @media screen and (min-width: getBreakPoint(desktop)) {
+            margin-right: 347px;
+        }
+    }
