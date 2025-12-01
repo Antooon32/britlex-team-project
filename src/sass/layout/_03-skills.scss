@@ -25,23 +25,28 @@
 
         font-size: 24px;
         line-height: 3.33;
-        margin-bottom: 56px;
+        margin-bottom: 64px;
+
+        @media screen and (min-width: getBreakPoint(mobile-xl)) {
+            margin-bottom: 35px;
+        }
 
         @media screen and (min-width: getBreakPoint(tablet)) {
             font-size: 30px;
             line-height: 2.67;
+            margin-bottom: 53px;
         }
 
         @media screen and (min-width: getBreakPoint(tablet-xl)) {
             font-size: 36px;
             line-height: 2.22;
-            margin-bottom: 70px;
+            margin-bottom: 72px;
         }
 
         @media screen and (min-width: getBreakPoint(desktop)) {
             font-size: 48px;
             line-height: 1.67;
-            margin-bottom: 96px;
+            margin-bottom: 83px;
         }
     }
 
@@ -140,24 +145,29 @@
             }
 
             .skills-list__description {
-                font-size: 13px;
+                font-size: 12px;
                 margin-bottom: 33px;
+                line-height: 1.6;
 
                 @media screen and (min-width: getBreakPoint(mobile-xl)) {
                     flex-grow: 1;
                     margin-bottom: 0;
+                    line-height: 1;
                 }
 
                 @media screen and (min-width: getBreakPoint(tablet)) {
                     margin-bottom: 10px;
+                    line-height: 1.4;
                 }
 
                 @media screen and (min-width: getBreakPoint(tablet-xl)) {
                     font-size: 14px;
+                    line-height: 1;
                 }
 
                 @media screen and (min-width: getBreakPoint(desktop)) {
-                    font-size: 20px;
+                    font-size: 16px;
+                    line-height: 1.2;
                 }
             }
 
@@ -201,23 +211,24 @@
                 @media screen and (min-width: getBreakPoint(tablet-xl)) {
                     width: 260px;
                 }
+
+                @media screen and (min-width: getBreakPoint(desktop)) {
+                    width: 390px;
+                }
             }
 
             .skills-list__content {
                 @media screen and (min-width: getBreakPoint(desktop)) {
-                    padding-bottom: 25px;
+                    padding-bottom: 60px;
                 }
             }
 
-            .skills-list__description {
-                @media screen and (min-width: getBreakPoint(tablet)) {
-                    white-space: pre-line;
-                }
+            // .skills-list__description {
 
-                @media screen and (min-width: getBreakPoint(desktop)) {
-                    font-size: 25px;
-                }
-            }
+            //     @media screen and (min-width: getBreakPoint(desktop)) {
+            //         font-size: px;
+            //     }
+            // }
         }
 
         .b {
@@ -299,6 +310,14 @@
                 padding-bottom: 0;
             }
 
+            @media screen and (min-width: getBreakPoint(tablet-xl)) {
+                width: 626px;
+            }
+
+            @media screen and (min-width: getBreakPoint(desktop)) {
+                width: auto;
+            }
+
             .skills-list__img {
                 @media screen and (min-width: getBreakPoint(tablet)) {
                     order: 1;
@@ -326,6 +345,12 @@
                 }
             }
 
+            .skills-list__title {
+                @media screen and (min-width: getBreakPoint(tablet)) {
+                    line-height: 3;
+                }
+            }
+
             .skills-list__description {
                 @media screen and (min-width: getBreakPoint(tablet-xl)) {
                     width: 303px;
@@ -333,6 +358,7 @@
                 }
 
                 @media screen and (min-width: getBreakPoint(desktop)) {
+                    width: 410px;
                     margin-bottom: 25px;
                 }
             }
