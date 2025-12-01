@@ -1,196 +1,215 @@
-.burger-menu {
-    overflow: hidden;
-    @include multi-transition(transform);
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 9999;
-    background-color: get-var(light__first);
+// ==================== BURGER MENU ====================
 
-    @media screen and (min-width: getBreakPoint(tablet)) {
-        padding-left: 47vw;
-        transform: translateX(-100vw);
+.burger-menu {
+  overflow: hidden;
+  @include multi-transition(transform);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  background-color: get-var(light__first);
+
+  // ✅ по дефолту меню ЗА ЕКРАНОМ
+  transform: translateX(-100vw);
+
+  // планшет і вище — свій зсув
+  @media screen and (min-width: getBreakPoint(tablet)) {
+    padding-left: 47vw;
+    transform: translateX(-55vw);
+  }
+
+  // desktop — бургер взагалі не потрібен
+  @media screen and (min-width: getBreakPoint(tablet-xl)) {
+    display: none;
+  }
+
+  // ---------------- container ----------------
+  .container.bcontainer {
+    position: relative;
+    padding: 35px 15px;
+    flex-direction: column;
+    gap: 0;
+    align-items: start;
+
+    @media screen and (min-width: getBreakPoint(mobile-xl)) {
+      padding: 48px 33px;
     }
+  }
+
+  // ---------------- open burger icon ----------------
+  &__open {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     @media screen and (min-width: getBreakPoint(tablet-xl)) {
-        display: none;
+      display: none;
+    }
+  }
+
+  // ---------------- close (X) ----------------
+  &__close {
+    position: absolute;
+    left: 80%;
+    top: 30px;
+    background-color: transparent;
+    cursor: pointer;
+    width: 39px;
+    height: 39px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media screen and (min-width: getBreakPoint(mobile-xl)) {
+      top: 47px;
+      left: 87%;
     }
 
-    .container.bcontainer {
-        position: relative;
-        padding: 35px 15px;
-        flex-direction: column;
-        gap: 0;
-        align-items: start;
+    @media screen and (min-width: getBreakPoint(tablet)) {
+      top: 25px;
+      left: 47%;
+    }
+  }
 
-        @media screen and (min-width: getBreakPoint(mobile-xl)) {
-            padding: 48px 33px;
-        }
+  // ---------------- logo ----------------
+  .logo {
+    position: relative;
+
+    @media screen and (min-width: getBreakPoint(mobile-xl)) {
+      font-size: 30px;
     }
 
-    &__open {
-        cursor: pointer;
-        // width: 40px;
-        // height: 40px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 48px;
+      left: 0;
+      width: 290px;
+      height: 1px;
+      background: get-var(light__fifth);
 
-        @media screen and (min-width: getBreakPoint(tablet-xl)) {
-            display: none;
-        }
+      @media screen and (min-width: getBreakPoint(mobile-xl)) {
+        width: 510px;
+        top: 77px;
+      }
+
+      @media screen and (min-width: getBreakPoint(tablet)) {
+        width: 360px;
+        top: 60px;
+      }
+    }
+  }
+
+  // ---------------- nav list ----------------
+  .bnav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+    margin-top: 69px;
+    margin-bottom: 69px;
+
+    @media screen and (min-width: getBreakPoint(mobile-xl)) {
+      margin-top: 80px;
+      margin-bottom: 80px;
     }
 
-    &__close {
-        position: absolute;
-        left: 80%;
-        top: 30px;
-        background-color: var(--white);
-        cursor: pointer;
-        width: 39px;
-        height: 39px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        @media screen and (min-width: getBreakPoint(mobile-xl)) {
-            top: 47px;
-            left: 87%;
-        }
-
-        @media screen and (min-width: getBreakPoint(tablet)) {
-            top: 25px;
-            left: 47%;
-        }
+    @media screen and (min-width: getBreakPoint(tablet)) {
+      margin-top: 57px;
+      margin-bottom: 62px;
     }
 
-    .logo {
-        position: relative;
-        // margin-bottom: 69px;
+    &__nav-link {
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 295%;
+      color: get-var(main__second);
+      @include multi-transition(color);
 
-        @media screen and (min-width: getBreakPoint(mobile-xl)) {
-            font-size: 30px;
-        }
+      &:hover {
+        color: get-var(light__seventh);
+      }
+
+      @media screen and (min-width: getBreakPoint(mobile-xl)) {
+        font-size: 24px;
+      }
+
+      @media screen and (min-width: getBreakPoint(tablet)) {
+        font-size: 22px;
+      }
+    }
+  }
+
+  // ---------------- CTA button ----------------
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid get-var(main__second);
+    border-radius: 5px;
+    width: 291px;
+    height: 65px;
+    @include multi-transition(background-color, color);
+
+    &:hover {
+      background-color: get-var(light__seventh);
+      color: get-var(light__first);
     }
 
-    .logo::after {
-        content: '';
-        position: absolute;
-        top: 48px;
-        left: 0;
-        width: 290px;
-        height: 1px;
-        background: get-var(light__fifth);
-
-        @media screen and (min-width: getBreakPoint(mobile-xl)) {
-            width: 510px;
-            top: 77px;
-        }
-
-        @media screen and (min-width: getBreakPoint(tablet)) {
-            width: 360px;
-            top: 60px;
-        }
+    @media screen and (min-width: getBreakPoint(mobile-xl)) {
+      width: 330px;
+      height: 70px;
     }
 
-    .bnav-list {
-        @include flex;
-        flex-direction: column;
-        gap: 34px;
-        margin-top: 69px;
-        margin-bottom: 69px;
-
-        @media screen and (min-width: getBreakPoint(mobile-xl)) {
-            margin-top: 80px;
-            margin-bottom: 80px;
-        }
-
-        @media screen and (min-width: getBreakPoint(tablet)) {
-            margin-top: 57px;
-            margin-bottom: 62px;
-        }
-
-        &__nav-link {
-            font-weight: 500;
-            font-size: 22px;
-            line-height: 295%;
-            color: get-var(main__second);
-            @include multi-transition(color);
-
-            &:hover {
-                color: get-var(light__seventh);
-            }
-
-            @media screen and (min-width: getBreakPoint(mobile-xl)) {
-                font-size: 24px;
-                line-height: 271%;
-            }
-
-            @media screen and (min-width: getBreakPoint(tablet)) {
-                font-size: 22px;
-                line-height: 273%;
-            }
-        }
+    @media screen and (min-width: getBreakPoint(tablet)) {
+      width: 210px;
+      height: 60px;
     }
-
-    &__button {
-        @include flex;
-        align-items: center;
-        justify-content: center;
-        border: 2px solid get-var(main__second);
-        border-radius: 5px;
-        width: 291px;
-        height: 65px;
-        @include multi-transition(background-color, color);
-
-        &:hover {
-            background-color: get-var(light__seventh);
-            color: get-var(light__first);
-        }
-
-        @media screen and (min-width: getBreakPoint(mobile-xl)) {
-            width: 330px;
-            height: 70px;
-        }
-
-        @media screen and (min-width: getBreakPoint(tablet)) {
-            width: 210px;
-            height: 60px;
-        }
-    }
+  }
 }
+
+
+// ==================== OPEN STATE ====================
+// ✅ коли меню ВІДКРИТЕ
 
 .is-open {
-    // visibility: hidden;
-    // pointer-events: none;
-    transform: translateX(-100vw);
-
-    @media screen and (min-width: getBreakPoint(tablet)) {
-        transform: translateX(-47vw);
-    }
+  transform: translateX(0) !important;
 }
+
+
+// ==================== BACKDROP ====================
+
+.backdrop {
+  display: none;
+
+  &.open {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    background-color: rgba(7, 34, 47, 0.7);
+  }
+}
+
+
+// ==================== BODY LOCK ====================
 
 .no-scroll {
-    overflow: hidden !important;
+  overflow: hidden !important;
 }
 
-.backdrop.open {
-    display: none;
 
-    @media screen and (min-width: getBreakPoint(tablet)) {
-        display: block;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 100;
-        background-color: rgba(7, 34, 47, 0.7);
-    }
-
-    @media screen and (min-width: getBreakPoint(tablet-xl)) {
-        display: none;
-    }
+@media screen and (min-width: getBreakPoint(tablet)) {
+    .burger-menu {
+  overflow: hidden;
+  @include multi-transition(transform);
+  position: fixed;
+  left: -47vw;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  background-color: get-var(light__first);}
 }
