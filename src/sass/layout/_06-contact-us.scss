@@ -68,7 +68,7 @@
         max-width: 420px;
 
         @media screen and (min-width: getBreakPoint(desktop)) {
-            max-width: 520px;
+            max-width: 662px;
         }
     }
 
@@ -96,10 +96,17 @@
         line-height: 1.6;
         color: get-var(dark__second);
         margin-bottom: 32px;
+        white-space: pre-line;
+
+          @media screen and (min-width: getBreakPoint(tablet)) {
+        &{
+            white-space: normal;
+        }
+        }
 
         @media screen and (min-width: getBreakPoint(desktop)) {
             font-size: 18px;
-            max-width: 450px;
+            max-width: 681px;
             margin-bottom: 40px;
         }
     }
@@ -182,4 +189,41 @@
             padding-top: 90px; // підкоригуй, якщо треба більше/менше місця
         }
     }
+}
+
+.contact {
+    background-color: lightblue;
+    padding-bottom: 60px;
+    position: relative; // ОБОВ’ЯЗКОВО для ::after
+
+    // ---------- UNDERLINE ----------
+    &::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 0;              // лінія ВНИЗУ секції
+        transform: translateX(-50%);
+        height: 1px;
+        background: get-var(light__third);
+        width: 290px;
+    }
+
+    @media screen and (min-width: getBreakPoint(mobile-xl)) {
+        &::after { width: 510px; }
+    }
+
+    @media screen and (min-width: getBreakPoint(tablet)) {
+        padding-bottom: 90px;
+        &::after { width: 690px; }
+    }
+
+    @media screen and (min-width: getBreakPoint(tablet-xl)) {
+        &::after { width: 929px; }
+    }
+
+    @media screen and (min-width: getBreakPoint(desktop)) {
+        padding-bottom: 150px;
+        &::after { width: 1338px; }
+    }
+
 }

@@ -5,47 +5,20 @@
     position: relative;
     padding: 40px 0 30px;
 
-    &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        height: 1px;
-        background: get-var(light__third);
-        width: 290px; 
-    }
-
     @media screen and (min-width: getBreakPoint(mobile-xl)) {
         padding: 42px 0 35px;
-
-        &::before {
-            width: 510px;
-        }
     }
 
     @media screen and (min-width: getBreakPoint(tablet)) {
         padding: 45px 0 40px;
-
-        &::before {
-            width: 690px;
-        }
     }
 
     @media screen and (min-width: getBreakPoint(tablet-xl)) {
         padding: 58px 0 45px;
-
-        &::before {
-            width: 929px;
-        }
     }
 
     @media screen and (min-width: getBreakPoint(desktop)) {
         padding: 70px 0 50px;
-
-        &::before {
-            width: 1338px;
-        }
     }
 
     /* ---------- FOOTER CONTAINER ---------- */
@@ -54,7 +27,7 @@
         flex-direction: column;
         gap: 24px;
         text-align: center;
-        align-items: center; // центр логотипа й лінків на мобайл
+        align-items: center;
     }
 
     /* MOBILE-XL (575px+) — усе в рядок */
@@ -69,12 +42,26 @@
 
     /* ---------- LOGO ---------- */
     &__logo {
-        font-size: 28px;
         font-weight: 600;
         color: get-var(dark__first);
 
+        /* MOBILE */
+        font-size: 20px;
+
         span {
             color: get-var(dark__second);
+        }
+
+        @media screen and (min-width: getBreakPoint(mobile-xl)) {
+            font-size: 22px;
+        }
+
+        @media screen and (min-width: getBreakPoint(tablet)) {
+            font-size: 24px;
+        }
+
+        @media screen and (min-width: getBreakPoint(tablet-xl)) {
+            font-size: 28px;
         }
 
         @media screen and (min-width: getBreakPoint(desktop)) {
@@ -102,30 +89,69 @@
         position: relative;
         padding-left: 10px;
 
+        @media screen and (min-width: getBreakPoint(desktop)) {
+            & {
+                position: relative;
+                padding-left: 16px;
+            }
+        }
+
         &:not(:first-child)::before {
             content: "•";
             position: absolute;
             left: 0;
-            top: 50%;
+            top: 65%;
             transform: translateY(-50%);
             color: get-var(dark__second);
-            font-size: 14px;
+
+            /* MOBILE */
+            font-size: 10px;
+
+            @media screen and (min-width: getBreakPoint(mobile-xl)) {
+                font-size: 11px;
+            }
+
+            @media screen and (min-width: getBreakPoint(tablet)) {
+                font-size: 12px;
+            }
+
+            @media screen and (min-width: getBreakPoint(tablet-xl)) {
+                font-size: 16px;
+            }
+
+            @media screen and (min-width: getBreakPoint(desktop)) {
+                font-size: 24px;
+            }
         }
     }
 
     /* ---------- LINK ---------- */
     &__link {
-        font-size: 10px;
         color: get-var(dark__second);
         white-space: nowrap;
         transition: color 0.2s ease;
+
+        /* MOBILE */
+        font-size: 10px;
 
         &:hover {
             color: get-var(main__second);
         }
 
-        @media screen and (min-width: getBreakPoint(desktop)) {
+        @media screen and (min-width: getBreakPoint(mobile-xl)) {
+            font-size: 11px;
+        }
+
+        @media screen and (min-width: getBreakPoint(tablet)) {
+            font-size: 12px;
+        }
+
+        @media screen and (min-width: getBreakPoint(tablet-xl)) {
             font-size: 16px;
+        }
+
+        @media screen and (min-width: getBreakPoint(desktop)) {
+            font-size: 24px;
         }
     }
 }
