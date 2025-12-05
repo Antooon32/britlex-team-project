@@ -98,17 +98,8 @@
         margin-bottom: 32px;
         white-space: pre-line;
 
-         @media screen and (min-width: getBreakPoint(mobile-xl)) {
-        &{
+        @media screen and (min-width: getBreakPoint(mobile-xl)) {
             white-space: normal;
-
-        }
-        }
-
-          @media screen and (min-width: getBreakPoint(tablet)) {
-        &{
-            white-space: normal;
-        }
         }
 
         @media screen and (min-width: getBreakPoint(desktop)) {
