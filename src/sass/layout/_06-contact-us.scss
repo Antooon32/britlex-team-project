@@ -1,5 +1,4 @@
 .contact {
-    background-color: lightblue;
     padding-bottom: 60px;
 
     @media screen and (min-width: getBreakPoint(tablet)) {
@@ -226,7 +225,6 @@
 }
 
 .contact {
-    background-color: lightblue;
     padding-bottom: 60px;
     position: relative; // ОБОВ’ЯЗКОВО для ::after
 
